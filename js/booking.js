@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
               <h3>Appointment Requested!</h3>
               <p>Your booking request <strong>${confirmNum}</strong> has been received. We'll confirm your appointment via SMS/call shortly.</p>
-              <p style="margin-top: 16px; font-size: 13px; color: #718096;">If you need immediate assistance, call us at <a href="tel:+919676995599" style="color:#0E8B8B; font-weight:600;">+91 96769 95599</a></p>
+              <p style="margin-top: 16px; font-size: 13px; color: #718096;">If you need immediate assistance, call us at <a href="tel:+919966396497" style="color:#0E8B8B; font-weight:600;">+91 99663 96497</a></p>
             </div>`;
                 }
             }, 1500);
