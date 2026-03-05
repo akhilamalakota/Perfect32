@@ -1,0 +1,391 @@
+/* ===================================
+   PERFECT 32 DENTAL CARE — Page Styles
+   =================================== */
+
+/* ── Homepage Hero ── */
+.hero {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, #1e4a73 50%, var(--color-secondary-dark) 100%);
+    color: #fff;
+    padding: var(--space-10) 0 var(--space-12);
+    position: relative;
+    overflow: hidden;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(14, 139, 139, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-8);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero__content h1 {
+    color: #fff;
+    font-size: var(--fs-h1);
+    margin-bottom: var(--space-4);
+    line-height: 1.15;
+}
+
+.hero__content h1 span {
+    display: block;
+    color: var(--color-accent-cta);
+    font-size: 0.55em;
+    font-weight: var(--fw-semibold);
+    margin-top: var(--space-2);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero__subtitle {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: var(--space-6);
+    line-height: 1.7;
+}
+
+.hero__ctas {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-6);
+}
+
+.hero__microcopy {
+    font-size: var(--fs-small);
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.hero__microcopy span {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.hero__image {
+    position: relative;
+}
+
+.hero__image-main {
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.hero__trust-float {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+
+@media (max-width: 900px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero__ctas {
+        justify-content: center;
+    }
+
+    .hero__microcopy {
+        justify-content: center;
+    }
+
+    .hero__image {
+        order: -1;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .hero__trust-float {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        padding: var(--space-8) 0;
+        min-height: auto;
+    }
+}
+
+/* ── Why Choose Us ── */
+.why-us__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-5);
+}
+
+.why-us__item {
+    text-align: center;
+    padding: var(--space-6) var(--space-4);
+    background: var(--color-bg-white);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-base);
+}
+
+.why-us__item:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.why-us__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    background: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-4);
+}
+
+.why-us__icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--color-primary);
+}
+
+.why-us__item h3 {
+    font-size: var(--fs-body);
+    margin-bottom: var(--space-2);
+}
+
+.why-us__item p {
+    font-size: var(--fs-small);
+    color: var(--color-text-muted);
+}
+
+@media (max-width: 900px) {
+    .why-us__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .why-us__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Doctors Section ── */
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .doctors-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Gallery Preview ── */
+.gallery-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+}
+
+.gallery-preview .gallery-item:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+@media (max-width: 640px) {
+    .gallery-preview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-preview .gallery-item:nth-child(1) {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+}
+
+/* ── Contact Page ── */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-8);
+}
+
+.contact-info__item {
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+}
+
+.contact-info__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-info__icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-primary);
+}
+
+.contact-info__text h4 {
+    font-size: var(--fs-body);
+    margin-bottom: var(--space-1);
+}
+
+.contact-info__text p {
+    color: var(--color-text-muted);
+    font-size: var(--fs-small);
+}
+
+.contact-map {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-top: var(--space-6);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Booking Page ── */
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: var(--space-8);
+    align-items: start;
+}
+
+.booking-sidebar {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-5));
+}
+
+@media (max-width: 900px) {
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-sidebar {
+        position: static;
+    }
+}
+
+/* ── Service Detail ── */
+.service-detail {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--space-8);
+    align-items: start;
+}
+
+.service-detail__sidebar {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-5));
+}
+
+.service-detail__sidebar .card {
+    margin-bottom: var(--space-5);
+}
+
+@media (max-width: 900px) {
+    .service-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail__sidebar {
+        position: static;
+    }
+}
+
+/* ── About Timeline Section ── */
+.about-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--space-8);
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Review Page Filters ── */
+.review-filters {
+    display: flex;
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+    flex-wrap: wrap;
+}
+
+.review-filter {
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    background: var(--color-bg-white);
+    font-size: var(--fs-small);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.review-filter:hover,
+.review-filter.active {
+    background: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+}
